@@ -37,4 +37,15 @@ public class Scripture
     {
         return _words.All(word => word.IsHidden());
     }
+
+    //add a count to congratulate the user for the efforts
+    public int WordCount()
+    {
+        return _words.Count;
+    }
+
+    public int HiddenWordCount()
+    {
+        return _words.Count(word => word.IsHidden());
+    }
 }

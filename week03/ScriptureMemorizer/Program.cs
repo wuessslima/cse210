@@ -11,6 +11,17 @@ class Program
         {
             Console.Clear();
             Console.WriteLine(scripture.GetDisplayText());
+
+
+            //add a count to congratulate the user for the efforts
+            int totalWords = scripture.WordCount();
+            int hiddenWords = scripture.HiddenWordCount();
+            if (hiddenWords > totalWords / 2)
+            {
+                Console.WriteLine("\nCongratulations on your effort so far, keep going, you can do it!");
+            }
+
+
             Console.WriteLine("\nPress ENTER to continue or type 'quit' to exit.");
 
             string input = Console.ReadLine();
